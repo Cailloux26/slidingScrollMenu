@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nub-4c-gRq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gRn-9x-apw">
+            <objects>
+                <viewController id="Nub-4c-gRq" customClass="ViewController" customModule="SlidingScrollMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OaL-vz-faW"/>
+                        <viewControllerLayoutGuide type="bottom" id="scO-Bz-blJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QBk-qq-DxD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEd-8O-cvN" userLabel="ContentScrollView">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Nub-4c-gRq" id="0Iw-1D-u5R"/>
+                                </connections>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME0-yk-lMS">
+                                <rect key="frame" x="0.0" y="33" width="375" height="67"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2C-Sx-Yee">
+                                        <rect key="frame" x="0.0" y="19" width="125" height="30"/>
+                                        <state key="normal" title="Description">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectedMenu:" destination="Nub-4c-gRq" eventType="touchUpInside" id="tp5-qd-CID"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLL-Xf-Gje">
+                                        <rect key="frame" x="250" y="19" width="125" height="30"/>
+                                        <state key="normal" title="Amenities">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectedMenu:" destination="Nub-4c-gRq" eventType="touchUpInside" id="GPp-v2-eb2"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLs-2Z-SoF" customClass="UnderLineView" customModule="SlidingScrollMenu" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="125" height="2"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="MGD-TP-gYj"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kv5-te-t26">
+                                        <rect key="frame" x="125" y="19" width="125" height="30"/>
+                                        <state key="normal" title="Details">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectedMenu:" destination="Nub-4c-gRq" eventType="touchUpInside" id="t6j-l7-Ekq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JLs-2Z-SoF" secondAttribute="bottom" id="55w-nM-m7T"/>
+                                    <constraint firstItem="kv5-te-t26" firstAttribute="leading" secondItem="B2C-Sx-Yee" secondAttribute="trailing" id="G4V-CX-ok0"/>
+                                    <constraint firstItem="fLL-Xf-Gje" firstAttribute="leading" secondItem="kv5-te-t26" secondAttribute="trailing" id="GgU-rn-bPp"/>
+                                    <constraint firstItem="kv5-te-t26" firstAttribute="width" secondItem="fLL-Xf-Gje" secondAttribute="width" id="RGD-Pw-avZ"/>
+                                    <constraint firstItem="JLs-2Z-SoF" firstAttribute="width" secondItem="B2C-Sx-Yee" secondAttribute="width" id="a05-70-yQQ"/>
+                                    <constraint firstItem="B2C-Sx-Yee" firstAttribute="leading" secondItem="ME0-yk-lMS" secondAttribute="leading" id="bLY-Nz-fS0"/>
+                                    <constraint firstAttribute="centerY" secondItem="fLL-Xf-Gje" secondAttribute="centerY" id="f8p-o9-qJz"/>
+                                    <constraint firstItem="kv5-te-t26" firstAttribute="width" secondItem="B2C-Sx-Yee" secondAttribute="width" id="fvK-Je-lTA"/>
+                                    <constraint firstAttribute="trailing" secondItem="fLL-Xf-Gje" secondAttribute="trailing" id="p4P-Se-sb5"/>
+                                    <constraint firstAttribute="centerY" secondItem="kv5-te-t26" secondAttribute="centerY" id="r93-fH-YgJ"/>
+                                    <constraint firstAttribute="centerY" secondItem="B2C-Sx-Yee" secondAttribute="centerY" id="sCU-nz-vb9"/>
+                                    <constraint firstItem="JLs-2Z-SoF" firstAttribute="leading" secondItem="ME0-yk-lMS" secondAttribute="leading" id="xgH-qQ-Euv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ME0-yk-lMS" secondAttribute="trailing" id="0l9-Nv-rz7"/>
+                            <constraint firstItem="CEd-8O-cvN" firstAttribute="top" secondItem="ME0-yk-lMS" secondAttribute="bottom" id="2Bf-b5-hco"/>
+                            <constraint firstItem="CEd-8O-cvN" firstAttribute="leading" secondItem="QBk-qq-DxD" secondAttribute="leading" id="53u-X7-YQu"/>
+                            <constraint firstAttribute="bottom" secondItem="CEd-8O-cvN" secondAttribute="bottom" id="HQ2-cZ-881"/>
+                            <constraint firstAttribute="trailing" secondItem="CEd-8O-cvN" secondAttribute="trailing" id="Hq7-Zy-Cmv"/>
+                            <constraint firstItem="ME0-yk-lMS" firstAttribute="top" secondItem="OaL-vz-faW" secondAttribute="bottom" constant="13" id="KD6-KM-nFo"/>
+                            <constraint firstItem="ME0-yk-lMS" firstAttribute="leading" secondItem="QBk-qq-DxD" secondAttribute="leading" id="OVH-sx-lQS"/>
+                            <constraint firstItem="CEd-8O-cvN" firstAttribute="top" secondItem="OaL-vz-faW" secondAttribute="bottom" constant="80" id="kz5-5e-R4R"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="amenitiesButton" destination="fLL-Xf-Gje" id="LZX-wq-gOo"/>
+                        <outlet property="descriptionButton" destination="B2C-Sx-Yee" id="Ubc-OP-4R7"/>
+                        <outlet property="detailsButton" destination="kv5-te-t26" id="uL5-fH-LOV"/>
+                        <outlet property="menuView" destination="ME0-yk-lMS" id="74o-6F-l0r"/>
+                        <outlet property="scrollBarView" destination="JLs-2Z-SoF" id="lry-tG-Vff"/>
+                        <outlet property="scrollView" destination="CEd-8O-cvN" id="8FU-Uy-AYS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSr-pU-veR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450.5" y="97.5"/>
+        </scene>
+    </scenes>
+</document>
